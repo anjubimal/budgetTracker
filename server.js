@@ -4,8 +4,10 @@ const mongoose = require("mongoose");
 const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/morning-crag-51208'
+
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/morning-tundra-43850',
+  MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
